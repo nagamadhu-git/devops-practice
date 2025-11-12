@@ -124,6 +124,5 @@ devops-practice/
 | IaC | Terraform |
 | CI/CD | Jenkins |
 | Scripting | Bash, YAML |
-| Monitoring (Upcoming) | Prometheus, Grafana |
 
 ---
