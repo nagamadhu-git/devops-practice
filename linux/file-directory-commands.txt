@@ -1,0 +1,55 @@
+[ec2-user@ip-172-31-3-142 linux]$ ls
+file
+
+[ec2-user@ip-172-31-3-142 linux]$ ls -a
+.  ..  file
+
+[ec2-user@ip-172-31-3-142 linux]$ ls -l
+total 4
+-rw-r--r--. 1 ec2-user ec2-user 10 Nov 16 06:43 file
+
+[ec2-user@ip-172-31-3-142 linux]$ ls -lha
+total 4.0K
+drwxr-xr-x. 2 ec2-user ec2-user 18 Nov 16 07:25 .
+drwxr-xr-x. 4 ec2-user ec2-user 48 Nov 16 06:40 ..
+-rw-r--r--. 1 ec2-user ec2-user 10 Nov 16 06:43 file
+
+[ec2-user@ip-172-31-3-142 linux]$ pwd
+/home/ec2-user/devops-practice/linux
+
+[ec2-user@ip-172-31-3-142 linux]$ cd ..
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ cd linux/
+
+[ec2-user@ip-172-31-3-142 linux]$ cd ..
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ tree linux/
+linux/
+└── file
+
+0 directories, 1 file
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ touch file-directory-commands.txt
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ mkdir test
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ rm test/
+rm: cannot remove 'test/': Is a directory
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ rm -r test/
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ cp file-directory-commands.txt file-directory-commands.txt.backuo
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ rm file-directory-commands.txt.backuo
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ mv file-directory-commands.txt file-and-directory-commands.txt
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ vi file-and-directory-commands.txt
+
+0[ec2-user@ip-172-31-3-142 devops-practice]$ ls
+README.md  file-and-directory-commands.txt  linux
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ rm file-and-directory-commands.txt
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ cd linux/
+
