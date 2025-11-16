@@ -1,4 +1,86 @@
 List of commands we used:
+-------------------------
+ls, ls -l, ls -lha
+pwd
+cd
+tree
+touch
+mkdir, mkdir -p
+rm, rm -rf
+cp, cp -r
+mv
+cat
+less
+more
+head
+tail, tail -f
+stat
+
+
+outputs:
+--------
+
+[ec2-user@ip-172-31-3-142 linux]$ ls
+file
+
+[ec2-user@ip-172-31-3-142 linux]$ ls -a
+.  ..  file
+
+[ec2-user@ip-172-31-3-142 linux]$ ls -l
+total 4
+-rw-r--r--. 1 ec2-user ec2-user 10 Nov 16 06:43 file
+
+[ec2-user@ip-172-31-3-142 linux]$ ls -lha
+total 4.0K
+drwxr-xr-x. 2 ec2-user ec2-user 18 Nov 16 07:25 .
+drwxr-xr-x. 4 ec2-user ec2-user 48 Nov 16 06:40 ..
+-rw-r--r--. 1 ec2-user ec2-user 10 Nov 16 06:43 file
+
+[ec2-user@ip-172-31-3-142 linux]$ pwd
+/home/ec2-user/devops-practice/linux
+
+[ec2-user@ip-172-31-3-142 linux]$ cd ..
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ cd linux/
+
+[ec2-user@ip-172-31-3-142 linux]$ cd ..
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ tree linux/
+linux/
+└── file
+
+0 directories, 1 file
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ touch file-directory-commands.txt
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ mkdir test
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ rm test/
+rm: cannot remove 'test/': Is a directory
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ rm -r test/
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ cp file-directory-commands.txt file-directory-commands.txt.backuo
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ rm file-directory-commands.txt.backuo
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ mv file-directory-commands.txt file-and-directory-commands.txt
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ vi file-and-directory-commands.txt
+
+0[ec2-user@ip-172-31-3-142 devops-practice]$ ls
+README.md  file-and-directory-commands.txt  linux
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ rm file-and-directory-commands.txt
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ cd linux/
+
+[ec2-user@ip-172-31-3-142 ~]$ cd /
+[ec2-user@ip-172-31-3-142 /]$ cd ~
+[ec2-user@ip-172-31-3-142 ~]$ cd devops-practice/linux/
+
+[ec2-user@ip-172-31-3-142 linux]$ cat file-directory-commands.txt
+List of commands we used:
 
 
 
@@ -56,4 +138,107 @@ README.md  file-and-directory-commands.txt  linux
 [ec2-user@ip-172-31-3-142 devops-practice]$ rm file-and-directory-commands.txt
 
 [ec2-user@ip-172-31-3-142 devops-practice]$ cd linux/
+
+
+[ec2-user@ip-172-31-3-142 linux]$ less file-directory-commands.txt
+
+[ec2-user@ip-172-31-3-142 linux]$ more file-directory-commands.txt
+List of commands we used:
+
+
+
+[ec2-user@ip-172-31-3-142 linux]$ ls
+file
+
+[ec2-user@ip-172-31-3-142 linux]$ ls -a
+.  ..  file
+
+[ec2-user@ip-172-31-3-142 linux]$ ls -l
+total 4
+-rw-r--r--. 1 ec2-user ec2-user 10 Nov 16 06:43 file
+
+[ec2-user@ip-172-31-3-142 linux]$ ls -lha
+total 4.0K
+drwxr-xr-x. 2 ec2-user ec2-user 18 Nov 16 07:25 .
+drwxr-xr-x. 4 ec2-user ec2-user 48 Nov 16 06:40 ..
+-rw-r--r--. 1 ec2-user ec2-user 10 Nov 16 06:43 file
+
+[ec2-user@ip-172-31-3-142 linux]$ pwd
+/home/ec2-user/devops-practice/linux
+
+[ec2-user@ip-172-31-3-142 linux]$ cd ..
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ cd linux/
+
+[ec2-user@ip-172-31-3-142 linux]$ cd ..
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ tree linux/
+linux/
+└── file
+
+0 directories, 1 file
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ touch file-directory-commands.txt
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ mkdir test
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ rm test/
+rm: cannot remove 'test/': Is a directory
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ rm -r test/
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ cp file-directory-commands.txt file-directory-commands.txt.backuo
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ rm file-directory-commands.txt.backuo
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ mv file-directory-commands.txt file-and-directory-commands.txt
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ vi file-and-directory-commands.txt
+
+0[ec2-user@ip-172-31-3-142 devops-practice]$ ls
+README.md  file-and-directory-commands.txt  linux
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ rm file-and-directory-commands.txt
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ cd linux/
+
+[ec2-user@ip-172-31-3-142 linux]$ tail -n 5 file-directory-commands.txt
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ rm file-and-directory-commands.txt
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ cd linux/
+
+[ec2-user@ip-172-31-3-142 linux]$ tail -n 10 file-directory-commands.txt
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ vi file-and-directory-commands.txt
+
+0[ec2-user@ip-172-31-3-142 devops-practice]$ ls
+README.md  file-and-directory-commands.txt  linux
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ rm file-and-directory-commands.txt
+
+[ec2-user@ip-172-31-3-142 devops-practice]$ cd linux/
+
+[ec2-user@ip-172-31-3-142 linux]$ head -n 10 file-directory-commands.txt
+List of commands we used:
+
+
+
+[ec2-user@ip-172-31-3-142 linux]$ ls
+file
+
+[ec2-user@ip-172-31-3-142 linux]$ ls -a
+.  ..  file
+
+[ec2-user@ip-172-31-3-142 linux]$ stat file-directory-commands.txt
+
+  File: file-directory-commands.txt
+  Size: 1654            Blocks: 8          IO Block: 4096   regular file
+Device: ca01h/51713d    Inode: 646271      Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/ec2-user)   Gid: ( 1000/ec2-user)
+Context: unconfined_u:object_r:user_home_t:s0
+Access: 2025-11-16 07:57:38.277624859 +0000
+Modify: 2025-11-16 07:57:38.277624859 +0000
+Change: 2025-11-16 07:57:38.277624859 +0000
+ Birth: 2025-11-16 07:57:38.277624859 +0000
 
